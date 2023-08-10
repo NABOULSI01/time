@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Schedule</title>
+    <link rel="stylesheet" href="styles.css">
+    
+
+</head>
+<style>/* Styling for the container */
+    /* Styling for the container */
+.form-input-select {
+  display: inline-block;
+  position: relative;
+}
+.timezone {
+  padding: 12px 12px 0;
+  display: inline-block;
+}
+
+/* Styling for the select element */
+#timezone-select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 200px;
+  background-color: white;
+  cursor: pointer;
+  direction: rtl;
+  text-align: right;
+  background-position: right center;
+}
+
+/* Styling for select options */
+#timezone-select option {
+  padding: 10px;
+  text-align: right;
+}
+
+#timezone-select::after {
+  content: "\25BC"; /* Unicode code for downward arrow */
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  pointer-events: none;
+}
+
+/* Style changes on select focus */
+#timezone-select:focus {
+  border-color: #007BFF;
+  outline: none;
+  box-shadow: 0 0 5px #007BFF;
+}
+
+/* Style changes on option hover */
+#timezone-select option:hover {
+  background-color: #f2f2f2;
+}
+
+.boxstitle {
+  display: inline-block;
+  text-align: right; /* Moved text-align here */
+}
+
+.box-title {
+  text-align: center;
+  padding: 2%;
+  background-color: #bebebe;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Added this */
+}
+
+.box-title h2 {
+  text-align: right;
+  font-size: 26px;
+  color: #15105a;
+  margin-bottom: 10px;
+}
+
+.box-title strong {
+  color: #15105a;
+}
+
+.nav-tabs {
+  list-style: none;
+  
+ 
+  display: flex;
+  justify-content: center;
+  flex-grow: 1; 
+  height: 40px;
+  
+}
+
+.box-title li:nth-child(1) {
+  background-color: #ffc0cb; /* Pink */
+}
+
+.box-title li:nth-child(2) {
+  background-color: #add8e6; /* Light Blue */
+}
+
+.box-title li:nth-child(3) {
+  background-color: #90ee90; /* Light Green */
+}
+
+.nav-tabs li {
+  margin: 0 10px;
+  padding: 10px 10px;
+  border: 1px solid #15105a;
+  border-radius: 5px;
+  text-align: center;
+
+}
+
+.nav-tabs li a {
+  color: #007bff;
+  text-decoration: none;
+  
+}
+
+.nav-tabs li a strong {
+  font-weight: bold;
+} 
+
+/* Original CSS */
+
+/* Add this media query for phones */
+@media (max-width: 768px) {
+  .timezone {
+    display: none; /* Display the timezone div on smaller screens */
+  }
+  
+  .box-title {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  
+  .box-title h2 {
+    text-align: center;
+    margin-top: 10px; /* Add a bit of space between the h2 and the navigation */
+  }
+  
+  .nav-tabs {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .nav-tabs li {
+    margin: 0 10px;
+    padding: 5px 10px;
+    border: 1px solid #15105a;
+    border-radius: 5px;
+  }
+}
+
+
+    </style>
+
+<body>
+
+   
+    
+
+    <div class="container">
+        <div class="center-box">
+
+          <div class="box-title">
+
+            <div class="timezone" include="form-input-select()">
+                <select id="timezone-select" required>
+                  
+                  <option value=""hidden >بتوقيت الدار البيضاء </option>
+              
+                 
+                  <option value="1">بتوقيت الدار البيضاء </option>
+                  <option value="2">بتوقيت القاهرة </option>
+                  <option value="3">بتوقيت الرياض </option>
+                  <option value="4">بتوقيت لندن </option>
+                  <option value="5">بتوقيت القدس </option>
+                  <option value="6"> بتوقيت الجزائر العاصمة  </option>
+                  <option value="7"> بتوقيت تونس </option>
+                </select>
+              </div>
+
+        <ul class="nav-tabs">
+            
+            <li class="yema">
+                <a href=""><strong>مباريات الأمس</strong></a>
+            </li>
+            <li class="toma">
+                <a href=""><strong>مباريات اليوم</strong></a>
+            </li>
+            <li class="tomat">
+                <a href="/matches-tomorrow"><strong>مباريات الغد</strong></a>
+            </li>
+        </ul>
+           
+        
+          <h2 class="boxstitle">
+            <strong>أهم مباريات اليوم</strong>
+        </h2>
+
+        </div>
+
+       
+        
+       
+    
+    
+    
+      
+    <div class="albaflex">
+        <div class="match-container commingsoon">
+        <a title="تفاصيل وموعد مباراة أتليتكو مدريد  و ألميريا بتاريخ 2023-04-16 في دوري الدوري الإسباني" href="index.html">
+           <div class="right-team">
+              <div class="team-logo">
+              <img alt="أتليتكو مدريد" data-src="http://koooralive.online/wp-content/uploads/2022/04/147.png" class="hqy-lazy hqy-loaded" height="70" src="http://koooralive.online/wp-content/uploads/2022/04/147.png" title="أتليتكو مدريد" width="70" loading="lazy">
+              </div>
+              <div class="team-name">أتليتكو مدريد</div>
+           </div>
+           <div class="match-center">
+            <div class="match-timing">
+                <div class="match-time" data-initial-time="10:00" id="match-time">
+                    10:00
+                </div>
+                <div id="result" style="display: none;">
+                    0-0
+                </div>
+                <div class="date not-start" data-start="" data-gameends="">  </div>
+            </div>
+        </div>
+           <div class="left-team">
+              <div class="team-logo">
+              <img alt="إشبيلية" data-src="http://koooralive.online/wp-content/uploads/2022/04/126.png" class="hqy-lazy hqy-loaded" height="70" src="http://koooralive.online/wp-content/uploads/2022/04/126.png" title="إشبيلية" width="70" loading="lazy">
+            </div>
+              <div class="team-name">إشبيلية</div>
+           </div>
+           <div class="match-info">
+              <ul>
+                 <li><span>beIN SPORTS 1 HD</span></li>
+                 <li><span>علي محمد علي</span></li>
+                 <li><span>الدوري الإسباني</span></li>
+              </ul>
+           </div>
+           <div class="overlay-match">
+            <div class="play-icon">
+                <!-- SVG for play icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="62px" height="62px">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+            </div>
+           </div></a>
+     </div>
+    </div>
+
+    <div class="albaflex">
+        <div class="match-container commingsoon">
+        <a title="تفاصيل وموعد مباراة أتليتكو مدريد  و ألميريا بتاريخ 2023-04-16 في دوري الدوري الإسباني" href="index.html">
+           <div class="right-team">
+              <div class="team-logo">
+              <img alt="أتليتكو مدريد" data-src="http://koooralive.online/wp-content/uploads/2022/04/147.png" class="hqy-lazy hqy-loaded" height="70" src="http://koooralive.online/wp-content/uploads/2022/04/147.png" title="أتليتكو مدريد" width="70" loading="lazy">
+              </div>
+              <div class="team-name">أتليتكو مدريد</div>
+           </div>
+           <div class="match-center">
+            <div class="match-timing">
+                <div class="match-time" data-initial-time="21:00" id="match-time">
+                    21:00
+                </div>
+                <div id="result" style="display: none;">
+                    0-0
+                </div>
+                <div class="date not-start" data-start="" data-gameends="">  </div>
+            </div>
+        </div>
+           <div class="left-team">
+              <div class="team-logo">
+              <img alt="إشبيلية" data-src="http://koooralive.online/wp-content/uploads/2022/04/126.png" class="hqy-lazy hqy-loaded" height="70" src="http://koooralive.online/wp-content/uploads/2022/04/126.png" title="إشبيلية" width="70" loading="lazy">
+            </div>
+              <div class="team-name">إشبيلية</div>
+           </div>
+           <div class="match-info">
+              <ul>
+                 <li><span>beIN SPORTS 1 HD</span></li>
+                 <li><span>علي محمد علي</span></li>
+                 <li><span>الدوري الإسباني</span></li>
+              </ul>
+           </div>
+           <div class="overlay-match">
+            <div class="play-icon">
+                <!-- SVG for play icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="62px" height="62px">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+            </div>
+           </div></a>
+     </div>
+    </div>
+
+
+    
+    
+    
+
+    
+    <div class="albaflex">
+        <div class="match-container commingsoon">
+        <a title="تفاصيل وموعد مباراة أتليتكو مدريد  و ألميريا بتاريخ 2023-04-16 في دوري الدوري الإسباني" href="index.html">
+           <div class="right-team">
+              <div class="team-logo">
+              <img alt="أتليتكو مدريد" data-src="http://koooralive.online/wp-content/uploads/2022/04/147.png" class="hqy-lazy hqy-loaded" height="70" src="http://koooralive.online/wp-content/uploads/2022/04/147.png" title="أتليتكو مدريد" width="70" loading="lazy">
+              </div>
+              <div class="team-name">أتليتكو مدريد</div>
+           </div>
+           <div class="match-center">
+            <div class="match-timing">
+                <div class="match-time" data-initial-time="16:00" id="match-time">
+                    16:00
+                </div>
+                <div id="result" style="display: none;">
+                    0-0
+                </div>
+                <div class="date not-start" data-start="" data-gameends="">  </div>
+            </div>
+        </div>
+           <div class="left-team">
+              <div class="team-logo">
+              <img alt="إشبيلية" data-src="http://koooralive.online/wp-content/uploads/2022/04/126.png" class="hqy-lazy hqy-loaded" height="70" src="http://koooralive.online/wp-content/uploads/2022/04/126.png" title="إشبيلية" width="70" loading="lazy">
+            </div>
+              <div class="team-name">إشبيلية</div>
+           </div>
+           <div class="match-info">
+              <ul>
+                 <li><span>beIN SPORTS 1 HD</span></li>
+                 <li><span>علي محمد علي</span></li>
+                 <li><span>الدوري الإسباني</span></li>
+              </ul>
+           </div>
+           <div class="overlay-match">
+            <div class="play-icon">
+                <!-- SVG for play icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="62px" height="62px">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+            </div>
+           </div></a>
+     </div>
+    </div>
+
+        </div>
+    </div>
+    
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const timezoneSelect = document.getElementById("timezone-select");
+          const matchTimeElements = document.querySelectorAll(".match-time");
+      
+          // Object to store timezone offsets in hours
+          const timezoneOffsets = {
+            1: 0,   // UTC+1
+            2: 2,   // UTC+3
+            3: 2,   // UTC+3
+            4: 0,   // UTC+1
+            5: 2,
+            6: 0,
+            7: 0,
+               
+            // ... add more timezones if needed
+          };
+      
+          // Function to update match times based on selected timezone
+          function updateMatchTimes(offsetHours) {
+  matchTimeElements.forEach(function (matchTimeElement) {
+    const initialTime = matchTimeElement.getAttribute("data-initial-time");
+    const initialDate = new Date(`2023-08-09T${initialTime}:00Z`);
+
+    const newDate = new Date(initialDate.getTime() + offsetHours * 60 * 60 * 1000);
+    const newTime = newDate.toISOString().substr(11, 5); // Extracts HH:MM from ISO string
+
+    matchTimeElement.textContent = newTime;
+  });
+}
+      
+          // Event listener for timezone select change
+          timezoneSelect.addEventListener("change", function () {
+            const selectedOption = timezoneSelect.options[timezoneSelect.selectedIndex];
+            const selectedTimezone = parseInt(selectedOption.value);
+      
+            const offsetHours = timezoneOffsets[selectedTimezone];
+            updateMatchTimes(offsetHours);
+          });
+      
+          // Initialize match times based on initial timezone (UTC+1)
+          updateMatchTimes(0);
+        });
+      </script>
+      
+      
+      
+      
+    
+    
+   
+
+</body>
+</html>
